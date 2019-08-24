@@ -1,15 +1,22 @@
 {
-    "executionRoleArn": "arn:aws:iam::account_ID:role/ecsTaskExecutionRole",
+    "family": "ecs-test-dev",
+    "executionRoleArn": "arn:aws:iam::788601987176:role/ecsTaskExecutionRole",
     "containerDefinitions": [
         {
-            "name": "sample-website",
-            "image": "<IMAGE1_NAME>",
+            "name": "ecs-test-dev",
+            "image": "amazon/amazon-ecs-sample",
             "essential": true,
             "portMappings": [
                 {
                     "hostPort": 80,
                     "protocol": "tcp",
                     "containerPort": 80
+                }
+            ],
+            "environment": [
+                {
+                    "name": "var",
+                    "value": "value"
                 }
             ]
         }
@@ -19,6 +26,5 @@
     ],
     "networkMode": "awsvpc",
     "cpu": "256",
-    "memory": "512",
-    "family": "ecs-demo"
+    "memory": "512"
 }

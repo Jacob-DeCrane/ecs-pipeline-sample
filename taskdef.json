@@ -3,7 +3,7 @@
     "executionRoleArn": "arn:aws:iam::788601987176:role/ecsTaskExecutionRole",
     "containerDefinitions": [
         {
-            "name": "ecs-test-dev",
+            "name": "ecs-test-container",
             "image": "amazon/amazon-ecs-sample",
             "essential": true,
             "portMappings": [

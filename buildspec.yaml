@@ -1,0 +1,16 @@
+version: 0.2
+            
+phases:
+  install:
+    runtime-versions:
+      docker: 18
+  pre_build:
+    commands:
+      - echo "Install dependencies here"
+  build:
+    commands:
+      - echo "build/test image here"
+      - echo "push image to repo"
+artifacts:
+  files:
+    - taskdef.json
